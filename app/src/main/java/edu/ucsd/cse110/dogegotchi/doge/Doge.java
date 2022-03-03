@@ -79,7 +79,10 @@ public class Doge implements ISubject<IDogeObserver>, ITickerObserver {
      * **Strictly follow** the Finite State Machine in the write-up.
      */
     private void tryRandomMoodSwing() {
-        // TODO: Exercise 1 -- Implement this method...
+        if(state == State.HAPPY)
+            if(Math.random() < moodSwingProbability || moodSwingProbability == 1){
+                setState(State.SAD);
+            }
     }
 
     @Override

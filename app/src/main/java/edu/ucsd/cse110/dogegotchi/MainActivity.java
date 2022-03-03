@@ -170,6 +170,12 @@ public class MainActivity extends Activity {
                                   getResources().getInteger(R.integer.happy_y)));
 
         // TODO: Exercise 1 - set up sprite and coords for SAD state.
+        stateBitmaps.put(Doge.State.SAD,
+                BitmapFactory.decodeResource(getResources(), R.drawable.sad_2x));
+        stateCoords.put(Doge.State.SAD,
+                new Coord(getResources().getInteger(R.integer.sad_x),
+                        getResources().getInteger(R.integer.sad_y)));
+
         stateBitmaps.put(Doge.State.SLEEPING,
                          BitmapFactory.decodeResource(getResources(), R.drawable.sleeping_2x));
         stateCoords.put(Doge.State.SLEEPING,
